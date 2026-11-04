@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-heading: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    
+    /* Corporate Palette */
+    --color-primary: #102B4E;
+    --color-primary-dark: #0A1C33;
+    --color-primary-light: #163B6B;
+    --color-secondary: #F47B20;
+    --color-secondary-hover: #DE6811;
+    --color-bg-light: #F1F5F9;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    color: #0F172A;
+    background-color: #FFFFFF;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: var(--font-heading);
+    letter-spacing: -0.025em;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #F47B20;
+}
+
+/* Corporate Card & Panel Utility Classes */
+.card-corporate {
+  background: #FFFFFF;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 4px 6px -1px rgba(16, 43, 78, 0.05), 0 2px 4px -2px rgba(16, 43, 78, 0.05);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-corporate:hover {
+  border-color: rgba(244, 123, 32, 0.4);
+  box-shadow: 0 12px 24px -4px rgba(16, 43, 78, 0.1), 0 4px 8px -2px rgba(16, 43, 78, 0.04);
+  transform: translateY(-2px);
+}
+
+.bg-navy-corporate {
+  background-color: #102B4E;
+}
+
+.text-navy-corporate {
+  color: #102B4E;
+}
+
+.bg-orange-corporate {
+  background-color: #F47B20;
+}
+
+.text-orange-corporate {
+  color: #F47B20;
+}
+
+/* Subtle corporate glassmorphism */
+.glass-panel-corporate {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.glass-panel-navy {
+  background: rgba(16, 43, 78, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Pulsing route line for map */
+@keyframes routePulse {
+  0% {
+    stroke-dashoffset: 100;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-route {
+  stroke-dasharray: 6 6;
+  animation: routePulse 3s linear infinite;
+}
+
+/* Reduced Motion Compliance */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  .animate-route,
+  .animate-pulse,
+  .animate-ping,
+  .animate-bounce {
+    animation: none !important;
+  }
+}

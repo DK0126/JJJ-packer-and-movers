@@ -1,0 +1,21 @@
+[
+  {
+    "id": "JJJ-2026-9823",
+    "name": "Suresh Ramaswamy",
+    "phone": "9840123456",
+    "email": "suresh@example.com",
+    "whatsapp": "",
+    "movingType": "Home Shifting",
+    "pickupLocation": "Anna Nagar, Chennai",
+    "deliveryLocation": "Indiranagar, Bengaluru",
+    "movingDate": "2026-10-15",
+    "propertyType": "3 BHK",
+    "description": "3 BHK complete home furniture with refrigerator and washing machine",
+    "additionalRequirements": "",
+    "preferredContactMethod": "Phone",
+    "status": "Contacted",
+    "adminNotes": "Spoke with client Suresh, quoted 22,000 INR for container load",
+    "createdAt": "2026-09-28T01:16:24.231Z",
+    "updatedAt": "2026-09-28T01:16:39.261Z"
+  }
+]
